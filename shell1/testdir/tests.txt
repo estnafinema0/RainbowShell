@@ -1,0 +1,93 @@
+Неуспешные
+1)
+false && echo "Should not print this" || echo "Failure as expected"
+
+
+//Ничего не выводит 
+// а должен выводить "Failure as expected"
+2)
+ls | grep "executor.c"
+//виснет 
+
+3)
+cat < input.txt | wc > output.txt
+// Синтаксическая ошибка: неожиданное '|'
+
+
+5)
+
+sleep 5 & wait ; echo "Background process completed"
+
+(sleep 5 && echo "Finished") || echo "Failed" & echo "Background group started"
+
+
+7)
+(ls | grep "file" > output.txt && echo "Filtered") || echo "Failed"
+ничего не выводит
+
+8)
+cat non_existent_file | wc || echo "Failed as expected"
+false && echo "Skipped" || echo "Executed fallback"
+
+//dне выводит Failed as expected
+
+9)ls ||| echo "Invalid syntax"
+
+Ожидалась команда
+Segmentation fault (core dumped)
+
+//И после этого вылетает ./myshell
+
+(ls | grep "executor.c" > output.txt && echo "Filtered") || echo "Failed"
+
+10) ls | wc >f
+выводит нули (нулей быть не должно)
+---
+(cd /; pwd); pwd
+---
+(false && echo "Skipped 1") || (echo "Fallback 1" && echo "Part of fallback")
+---
+echo "Background task" > output.txt & cat output.txt
+---
+echo "Background process test" & sleep 5
+---
+sleep 5 & echo "Background process test" 
+---
+ps & sleep 10
+---
+sleep 5 & ps
+---
+sleep 5 & ps -o stat,pid,cmd | grep sleep
+---
+echo "Background group" && sleep 3; echo "Done"
+---
+true && echo "First part passed"
+---
+false || echo "Fallback executed"
+---
+true && echo "Part 1 passed" && echo "Part 2 passed"
+---
+false && echo "This should not print" && echo "This also should not print"
+---
+ls non_existent_dir && echo "This should not print" || echo "Directory not found"
+---
+echo "hello" | grep "hello" && echo "Pipeline succeeded" || echo "Pipeline failed"
+---
+ps; ls; (cd .. ; ls; ps) && ls && ps
+---
+date; (ls -l | cat -n)>f & pwd
+---
+ps | cat fnotexist && pwd
+---
+cat fnotexist | wc && pwd
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
