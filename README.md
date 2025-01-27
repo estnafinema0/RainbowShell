@@ -2,7 +2,7 @@
 
 Welcome to **RainbowShell**, my educational but powerful custom Unix shell written in C. RainbowShell implements **pipes**, **redirections**, **logical operators**, **subshells**, and **background jobs** while also featuring a **rainbow/gradient** greeting message (builtes `color.h` library).
 
-> **Note**: This is a project for the 3rd semester at CMC MSU, meant to showcase an understanding of systems programming, process handling, and shell scripting concepts.
+> **Note**: This is a project for the 3rd semester at CMC MSU (summarizing skills of systems programming, process handling, shell scripting concepts).
 
 ---
 
