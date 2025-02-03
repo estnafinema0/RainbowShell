@@ -24,6 +24,8 @@ Welcome to **RainbowShell**, my educational but powerful custom Unix shell writt
 - **Rainbow Greeting**  
   When you launch RainbowShell, you’re greeted with a colorful gradient welcome message. Because, who don't want to meet a rainbow 🌈 ?
 
+![RainbowShell](image.png)
+
 - **Custom Command Parser**  
   - Supports multi-stage pipelines: `cmd1 | cmd2 | cmd3`
   - Understands logical operators: `&&`, `||`
